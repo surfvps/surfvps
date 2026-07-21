@@ -1,0 +1,49 @@
+{
+  "name": "surfvps",
+  "version": "0.3.0",
+  "description": "Deploy a VPS on DigitalOcean, Vultr & more \u2014 pay with crypto. CLI for surfvps.com.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "surfvps": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "vps",
+    "crypto",
+    "bitcoin",
+    "monero",
+    "digitalocean",
+    "vultr",
+    "cli"
+  ],
+  "homepage": "https://surfvps.com",
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "tsup",
+    "surf": "node --import tsx/esm src/index.ts",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsup": "8.3.5",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surfvps/surfvps.git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/surfvps/surfvps/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "surfvps"
+}

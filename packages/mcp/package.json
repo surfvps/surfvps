@@ -1,0 +1,54 @@
+{
+  "name": "surfvps-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for surfvps \u2014 let an AI agent deploy VPS servers and pay with crypto, on surfvps.com.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "surfvps-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vps",
+    "crypto",
+    "bitcoin",
+    "monero",
+    "digitalocean",
+    "ai",
+    "agent"
+  ],
+  "homepage": "https://surfvps.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surfvps/surfvps.git",
+    "directory": "packages/mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/surfvps/surfvps/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "surf": "node --import tsx/esm src/index.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsup": "8.3.5",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8"
+  },
+  "author": "surfvps"
+}
