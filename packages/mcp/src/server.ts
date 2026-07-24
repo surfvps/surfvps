@@ -33,7 +33,7 @@ export function buildServer(api: Api): McpServer {
 
   server.registerTool("list_catalog", {
     description: "List a provider's deployable regions, plan sizes (with monthly price) and OS images. ALWAYS call this before deploy_server to get valid refs — they are provider-specific and cannot be guessed.",
-    inputSchema: { provider: z.enum(["digitalocean", "vultr"]).default("digitalocean").describe("cloud provider — digitalocean is the public one; vultr is currently restricted to admin accounts and returns bad_provider for everyone else") },
+    inputSchema: { provider: z.enum(["digitalocean", "vultr"]).default("vultr").describe("cloud provider. Both are available: vultr is cheaper (from $11.00/mo) and has more regions; digitalocean starts at $13.20/mo.") },
     annotations: R("List catalog"),
   }, tool(async ({ provider }) => api.catalog(provider)));
 
@@ -77,7 +77,7 @@ export function buildServer(api: Api): McpServer {
   server.registerTool("deploy_server", {
     description: "Deploy a new VPS. Get valid provider/region/size/image refs from list_catalog first — they are provider-specific. If no ssh_key_ids are given, a root password is generated (read it later with get_root_password). Deploying spends real money from the prepaid balance: charging starts immediately with a 1-hour minimum (and a $0.02 minimum per server), so a box destroyed after 30 seconds still costs an hour. The new server starts as status \"provisioning\" and becomes \"running\" — poll get_server. Give each server a distinct hostname; it is how you and the user tell them apart.",
     inputSchema: {
-      provider: z.enum(["digitalocean", "vultr"]).default("digitalocean").describe("digitalocean is the public provider; vultr is admin-only right now and returns bad_provider"),
+      provider: z.enum(["digitalocean", "vultr"]).default("vultr").describe("both are available; vultr is the cheaper of the two (from $11.00/mo) with more regions"),
       region: z.string().describe("region ref from list_catalog"),
       size: z.string().describe("plan size ref from list_catalog"),
       image: z.string().describe("OS image ref from list_catalog"),

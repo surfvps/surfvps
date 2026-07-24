@@ -46,7 +46,7 @@ claude mcp add surfvps -e SURFVPS_TOKEN=sk_live_... -- npx -y surfvps-mcp
 | `create_deposit` | Start a crypto top-up — returns an address + exact amount |
 | `deposit_status` | Poll a deposit's confirmations |
 
-DigitalOcean is the provider open to all accounts; Vultr is currently restricted to admin accounts and returns `bad_provider` for everyone else.
+DigitalOcean and Vultr are both available. Vultr is the cheaper of the two (from $11.00/mo, 33 regions); DigitalOcean starts at $13.20/mo. Call `list_catalog` for live plans and prices — never assume them.
 
 ## Safety
 
