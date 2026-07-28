@@ -1,17 +1,27 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
   "name": "io.github.surfvps/surfvps",
-  "description": "Deploy and manage VPS servers paid with crypto — catalog, cost estimates, deploy/destroy, SSH keys and Bitcoin/Monero top-ups.",
-  "repository": { "url": "https://github.com/surfvps/surfvps", "source": "github" },
-  "version": "0.1.0",
+  "description": "Deploy and manage VPS servers paid with crypto \u2014 catalog, cost estimates, deploy/destroy, SSH keys and Bitcoin/Monero top-ups.",
+  "repository": {
+    "url": "https://github.com/surfvps/surfvps",
+    "source": "github"
+  },
+  "version": "0.1.1",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "surfvps-mcp",
-      "version": "0.1.0",
-      "transport": { "type": "stdio" },
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
-        { "name": "SURFVPS_TOKEN", "description": "API token from surfvps.com → Settings → API tokens", "isRequired": true, "isSecret": true }
+        {
+          "name": "SURFVPS_TOKEN",
+          "description": "API token from surfvps.com \u2192 Settings \u2192 API tokens",
+          "isRequired": true,
+          "isSecret": true
+        }
       ]
     }
   ]

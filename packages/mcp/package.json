@@ -1,8 +1,10 @@
 {
   "name": "surfvps-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "mcpName": "io.github.surfvps/surfvps",
   "description": "MCP server for surfvps \u2014 let an AI agent deploy VPS servers and pay with crypto, on surfvps.com.",
   "license": "MIT",
+  "author": "surfvps",
   "type": "module",
   "bin": {
     "surfvps-mcp": "dist/index.js"
@@ -49,6 +51,5 @@
     "tsx": "4.19.2",
     "typescript": "5.7.2",
     "vitest": "2.1.8"
-  },
-  "author": "surfvps"
+  }
 }
