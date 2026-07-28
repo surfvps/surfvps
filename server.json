@@ -1,7 +1,7 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.surfvps/surfvps",
-  "description": "Deploy and manage VPS servers paid with crypto \u2014 catalog, cost estimates, deploy/destroy, SSH keys and Bitcoin/Monero top-ups.",
+  "description": "Deploy and manage VPS servers paid with crypto \u2014 Bitcoin, Monero, USDT. Hourly billing.",
   "repository": {
     "url": "https://github.com/surfvps/surfvps",
     "source": "github"
